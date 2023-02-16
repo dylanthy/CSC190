@@ -1,0 +1,18 @@
+Plant Tracker App Models
+
+User model:
+	Zipcode field - held as number
+
+List model:
+	Plant field - held as plant
+
+Plant model:
+	Name field - held as string
+	Species field - held as species
+	Birth field - held as date
+	Photo field - held as picture
+	Timer field - held as time
+
+Species model:
+	Classification field - held as string
+	Biography field - held as strings
