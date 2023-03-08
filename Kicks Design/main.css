@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+header {
+  text-align: right;
+}
+
+shoe-card {
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 1px 1px 10px 0px #b2b2b2;
+  border-radius: 10px;
+
+  display: grid;
+
+  grid-template:
+    "image name        name"       60px
+    "image description description      " 30px
+    "image price buy_button" 40px
+    /min-content
+  ;
+
+  column-gap: 10px;
+}
+
+shoe-card .name {
+  grid-area: name;
+  font-size: 25px;
+  margin: 0;
+}
+
+shoe-card img {
+  grid-area: image;
+  
+  max-height: 100%;;
+}
+
+shoe-card [class="description"] {
+  font-size: 10px;
+  color: gray;
+
+  grid-area: description;
+  margin: 0;
+  align-self: center;
+}
+
+
+shoe-card .price {
+  grid-area: price;
+
+  margin: 0;
+}
+
+shoe-card button {
+  width: 100%;
+  padding: 5px;
+
+  grid-area: buy_button;
+  
+}
