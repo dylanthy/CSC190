@@ -1,0 +1,122 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {background-color:rgb(48, 179, 48);}
+*   {font-family: 'Epilogue', sans-serif;}
+h1 {text-align:center;
+    font-weight: 800;
+    color:rgb(47, 114, 47);
+    font-size: 48px;
+    text-shadow: 2px 2px 10px#6f8377;}
+
+plant-card {
+    margin: auto;
+    padding: 20px;
+    box-shadow: 1px 1px 10px 0px #b2b2b2;
+    border: solid 1px #6f8377;
+    background-color:rgb(87, 207, 87) !important;
+    border-radius: 20px;
+    display:grid;
+    gap: 20px;
+    max-width: 600px;
+    min-width: 400px;
+    
+    
+
+    grid-template:
+        "image name" 
+        "image timer" 
+        "image age"
+        "species none"
+        "description description"
+        "info_button open_close_button"
+        /min-content
+    ;
+        
+}
+
+    plant-card .name{
+        grid-area: name;
+        font-size: 30px;
+        font-weight: 600;
+        margin: 0;
+        float: right;
+    }
+    plant-card .timer{
+        grid-area: timer;
+        font-size: 16px;
+        margin: 0;
+    }
+    plant-card .age{
+        grid-area: age;
+        font-size: 16px;
+        margin: 0;
+    }
+    plant-card .species{
+        grid-area: species;
+        font-size: 20px;
+        margin: 0;
+        font-style: italic;
+    }
+    plant-card img{
+        grid-area: image;
+        max-height: 240px;
+        max-width: 240px;
+        border: solid 1px #6f8377;
+        border-radius: 20px;
+
+    }
+    plant-card .description{
+        font-size: 13px;
+        grid-area: description;
+        margin: 0;
+    }
+    plant-card .info_button{
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        border: solid 1px #6f8377;
+        grid-area: info_button;
+        font-size: 25px;
+        text-align:center;
+        border-radius: 50px;
+        font-weight: 900;
+        
+        
+    }
+    plant-card .open_close_button{
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        border: solid 1px #6f8377;
+        grid-area: open_close_button;
+        font-size: 25px;
+        border-radius: 50px;
+        font-weight: 900;
+        
+    }
+</style>
+<body>
+<h1>Water Wizard</h1>
+        
+ <plant-card>
+        <!-- svelte-ignore a11y-missing-attribute -->
+        <img title="Angel Wing Cactus" src="./cactus.jpg">
+        <p class="name">Angel Wing Cactus</p>
+        <p class="timer">Water in x days and x hours.</p>
+        <p class="age">x days x hours old.</p>
+        <p class="species">Opunta Albispina</p>
+        <p class="description">A desert plant that grows evenly spaced clusters. Needs little water.</p>
+        <button class="info_button">...</button>
+        <button class="open_close_button">X</button>
+    </plant-card>
+    <plant-card>
+        <!-- svelte-ignore a11y-missing-attribute -->
+        <img title="Bromeliad" src="./bromeliad.jpg">
+        <p class="name">Bromeliad</p>
+        <p class="timer">Water in x days and x hours.</p>
+        <p class="age">x days and x hours old.</p>
+        <p class="species">Bromeliad Vriesea</p>
+        <p class="description">An indoor fower, can survive without water for a decent amount of time, but that doesn't mean you should wait to water.</p>
+    </plant-card>
+</body>
